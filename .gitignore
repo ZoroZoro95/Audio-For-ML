@@ -1,0 +1,48 @@
+# Audio files
+*.mp3
+*.wav
+*.flac
+*.ogg
+*.m4a
+*.aac
+*.wma
+*.aiff
+*.au
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Python
+*.egg-info/
+dist/
+build/
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+.venv
+env/
+venv/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# IDE
+.idea/
+*.swp
+*.swo
+*~
+
+# Large binary files
+*.zip
+*.tar.gz
+*.rar
