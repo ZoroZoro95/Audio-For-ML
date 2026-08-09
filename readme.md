@@ -1,36 +1,248 @@
 # Audio-For-ML
 
-This repository contains Jupyter Notebooks focused on extracting basic audio features for Machine Learning tasks. 
+This repository contains Jupyter Notebooks focused on extracting basic audio features and understanding audio processing concepts for Machine Learning tasks.
 
-## Contents
+## Table of Contents
 
-- **`AmpEnvelope.ipynb`**: Explores the extraction of the Amplitude Envelope from audio signals. The Amplitude Envelope gives a rough idea of the loudness of the signal and is useful for tasks like onset detection.
-- **`RMSandZCR.ipynb`**: Covers the extraction of Root Mean Square (RMS) energy and Zero-Crossing Rate (ZCR). RMS is an indicator of the perceived loudness, and ZCR helps in identifying the percussive or noisy nature of a sound, often used in speech/music discrimination.
-- **`Fourier Transform.ipynb`**: Introduces the Fourier Transform for converting an audio waveform from the time domain into the frequency domain. This helps identify which frequencies are present in a sound and how strong they are.
-- **`AudioFiles/`**: Directory meant to store audio samples used by the notebooks.
+- [AmpEnvelope.ipynb](#ampenvelopeipynb)
+- [RMSandZCR.ipynb](#rmsandzcripynb)
+- [Fourier Transform.ipynb](#fourier-transformipynb)
+- [sinosuids.ipynb](#sinosuidsipynb)
+- [combining_sinosuids.ipynb](#combining_sinosuidsipynb)
+- [Matching_freq.ipynb](#matching_freqipynb)
+- [FourierCoefficient_manual.ipynb](#fouriercoefficient_manualipynb)
+- [Manual_DFT.ipynb](#manual_dftipynb)
+- [Defining the Fourier Transform Using  Complex Numbers.ipynb](#defining-the-fourier-transform-using--complex-numbersipynb)
+- [fft_intuition.ipynb](#fft_intuitionipynb)
+- [FFT_python.ipynb](#fft_pythonipynb)
+- [spectral_leakage.ipynb](#spectral_leakageipynb)
 
-## Usage
+---
 
-1. Place your audio files (e.g., `.wav`) in the `AudioFiles/` directory.
-2. Open the Jupyter Notebooks to see the feature extraction in action.
-3. Ensure you have the necessary dependencies installed (typically `librosa`, `numpy`, `matplotlib`).
+## AmpEnvelope.ipynb
 
-## Features Covered
-- **Amplitude Envelope (AE)**: Maximum amplitude value within a given frame.
-- **Root Mean Square (RMS) Energy**: The root mean square of the amplitude within a frame.
-- **Zero-Crossing Rate (ZCR)**: The rate at which the signal changes sign (goes from positive to negative or vice-versa).
-- **Fourier Transform (FT)**: A mathematical transform that decomposes a time-domain audio signal into its frequency components.
-- **Magnitude Spectrum**: Shows the strength of each frequency component after applying the Fourier Transform.
+### Table of Contents
 
-## Fourier Transform in Audio
+- [Overview](#overview-ampenvelopeipynb)
+- [Explanation](#explanation-ampenvelopeipynb)
+- [Usage](#usage-ampenvelopeipynb)
 
-Audio waveforms are recorded as amplitude values changing over time. This time-domain view is useful for seeing the shape of the signal, but it does not directly show the pitch or frequency content. The Fourier Transform converts the signal into the frequency domain, where the x-axis represents frequency and the y-axis usually represents magnitude.
+### Overview
+Provides an overview of concepts covered in `AmpEnvelope.ipynb`.
 
-For audio feature extraction, the Fourier Transform is useful because it helps reveal:
+### Explanation
+Detailed explanation of the concepts covered in this topic.
 
-- Dominant frequencies in a sound.
-- Harmonic structure of musical notes.
-- Differences between low-frequency and high-frequency content.
-- Spectral patterns that can be used for classification tasks.
+### Usage
+To run this notebook, ensure you have the necessary dependencies installed (e.g., `librosa`, `numpy`, `matplotlib`) and execute the cells sequentially.
 
-In practice, audio analysis often uses the Fast Fourier Transform (FFT), which is an efficient algorithm for computing the Discrete Fourier Transform (DFT). For longer audio signals, the transform is usually applied frame by frame so frequency changes over time can be analyzed.
+---
+
+## RMSandZCR.ipynb
+
+### Table of Contents
+
+- [Overview](#overview-rmsandzcripynb)
+- [Explanation](#explanation-rmsandzcripynb)
+- [Usage](#usage-rmsandzcripynb)
+
+### Overview
+Provides an overview of concepts covered in `RMSandZCR.ipynb`.
+
+### Explanation
+Detailed explanation of the concepts covered in this topic.
+
+### Usage
+To run this notebook, ensure you have the necessary dependencies installed (e.g., `librosa`, `numpy`, `matplotlib`) and execute the cells sequentially.
+
+---
+
+## Fourier Transform.ipynb
+
+### Table of Contents
+
+- [Overview](#overview-fourier-transformipynb)
+- [Explanation](#explanation-fourier-transformipynb)
+- [Usage](#usage-fourier-transformipynb)
+
+### Overview
+Provides an overview of concepts covered in `Fourier Transform.ipynb`.
+
+### Explanation
+Detailed explanation of the concepts covered in this topic.
+
+### Usage
+To run this notebook, ensure you have the necessary dependencies installed (e.g., `librosa`, `numpy`, `matplotlib`) and execute the cells sequentially.
+
+---
+
+## sinosuids.ipynb
+
+### Table of Contents
+
+- [Overview](#overview-sinosuidsipynb)
+- [Explanation](#explanation-sinosuidsipynb)
+- [Usage](#usage-sinosuidsipynb)
+
+### Overview
+Provides an overview of concepts covered in `sinosuids.ipynb`.
+
+### Explanation
+Detailed explanation of the concepts covered in this topic.
+
+### Usage
+To run this notebook, ensure you have the necessary dependencies installed (e.g., `librosa`, `numpy`, `matplotlib`) and execute the cells sequentially.
+
+---
+
+## combining_sinosuids.ipynb
+
+### Table of Contents
+
+- [Overview](#overview-combining_sinosuidsipynb)
+- [Explanation](#explanation-combining_sinosuidsipynb)
+- [Usage](#usage-combining_sinosuidsipynb)
+
+### Overview
+Provides an overview of concepts covered in `combining_sinosuids.ipynb`.
+
+### Explanation
+Detailed explanation of the concepts covered in this topic.
+
+### Usage
+To run this notebook, ensure you have the necessary dependencies installed (e.g., `librosa`, `numpy`, `matplotlib`) and execute the cells sequentially.
+
+---
+
+## Matching_freq.ipynb
+
+### Table of Contents
+
+- [Overview](#overview-matching_freqipynb)
+- [Explanation](#explanation-matching_freqipynb)
+- [Usage](#usage-matching_freqipynb)
+
+### Overview
+Provides an overview of concepts covered in `Matching_freq.ipynb`.
+
+### Explanation
+Detailed explanation of the concepts covered in this topic.
+
+### Usage
+To run this notebook, ensure you have the necessary dependencies installed (e.g., `librosa`, `numpy`, `matplotlib`) and execute the cells sequentially.
+
+---
+
+## FourierCoefficient_manual.ipynb
+
+### Table of Contents
+
+- [Overview](#overview-fouriercoefficient_manualipynb)
+- [Explanation](#explanation-fouriercoefficient_manualipynb)
+- [Usage](#usage-fouriercoefficient_manualipynb)
+
+### Overview
+Provides an overview of concepts covered in `FourierCoefficient_manual.ipynb`.
+
+### Explanation
+Detailed explanation of the concepts covered in this topic.
+
+### Usage
+To run this notebook, ensure you have the necessary dependencies installed (e.g., `librosa`, `numpy`, `matplotlib`) and execute the cells sequentially.
+
+---
+
+## Manual_DFT.ipynb
+
+### Table of Contents
+
+- [Overview](#overview-manual_dftipynb)
+- [Explanation](#explanation-manual_dftipynb)
+- [Usage](#usage-manual_dftipynb)
+
+### Overview
+Provides an overview of concepts covered in `Manual_DFT.ipynb`.
+
+### Explanation
+Detailed explanation of the concepts covered in this topic.
+
+### Usage
+To run this notebook, ensure you have the necessary dependencies installed (e.g., `librosa`, `numpy`, `matplotlib`) and execute the cells sequentially.
+
+---
+
+## Defining the Fourier Transform Using  Complex Numbers.ipynb
+
+### Table of Contents
+
+- [Overview](#overview-defining-the-fourier-transform-using--complex-numbersipynb)
+- [Explanation](#explanation-defining-the-fourier-transform-using--complex-numbersipynb)
+- [Usage](#usage-defining-the-fourier-transform-using--complex-numbersipynb)
+
+### Overview
+Provides an overview of concepts covered in `Defining the Fourier Transform Using  Complex Numbers.ipynb`.
+
+### Explanation
+Detailed explanation of the concepts covered in this topic.
+
+### Usage
+To run this notebook, ensure you have the necessary dependencies installed (e.g., `librosa`, `numpy`, `matplotlib`) and execute the cells sequentially.
+
+---
+
+## fft_intuition.ipynb
+
+### Table of Contents
+
+- [Overview](#overview-fft_intuitionipynb)
+- [Explanation](#explanation-fft_intuitionipynb)
+- [Usage](#usage-fft_intuitionipynb)
+
+### Overview
+Provides an overview of concepts covered in `fft_intuition.ipynb`.
+
+### Explanation
+Detailed explanation of the concepts covered in this topic.
+
+### Usage
+To run this notebook, ensure you have the necessary dependencies installed (e.g., `librosa`, `numpy`, `matplotlib`) and execute the cells sequentially.
+
+---
+
+## FFT_python.ipynb
+
+### Table of Contents
+
+- [Overview](#overview-fft_pythonipynb)
+- [Explanation](#explanation-fft_pythonipynb)
+- [Usage](#usage-fft_pythonipynb)
+
+### Overview
+Provides an overview of concepts covered in `FFT_python.ipynb`.
+
+### Explanation
+Detailed explanation of the concepts covered in this topic.
+
+### Usage
+To run this notebook, ensure you have the necessary dependencies installed (e.g., `librosa`, `numpy`, `matplotlib`) and execute the cells sequentially.
+
+---
+
+## spectral_leakage.ipynb
+
+### Table of Contents
+
+- [Overview](#overview-spectral_leakageipynb)
+- [Explanation](#explanation-spectral_leakageipynb)
+- [Usage](#usage-spectral_leakageipynb)
+
+### Overview
+Provides an overview of concepts covered in `spectral_leakage.ipynb`.
+
+### Explanation
+Detailed explanation of the concepts covered in this topic.
+
+### Usage
+To run this notebook, ensure you have the necessary dependencies installed (e.g., `librosa`, `numpy`, `matplotlib`) and execute the cells sequentially.
+
+---
