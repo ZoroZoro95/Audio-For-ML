@@ -42,6 +42,9 @@ venv/
 *.swo
 *~
 
+# Agents
+Mini Audio Analyzer/.agents/
+
 # Large binary files
 *.zip
 *.tar.gz

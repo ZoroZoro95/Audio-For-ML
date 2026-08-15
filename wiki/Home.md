@@ -31,3 +31,14 @@ Welcome to the Audio-For-ML wiki! This wiki contains detailed theoretical and co
 - **[Spectral Leakage and Intuition](Spectral-Leakage-and-Intuition.md)**
   - Intuitive understanding of Fourier Transforms
   - The problem of spectral leakage
+
+- **[Short-Time Fourier Transform (STFT)](Short-Time-Fourier-Transform-(STFT).md)**
+  - Time-frequency trade-off and Spectrograms
+  - Windowing and hop length
+
+- **[Discrete Cosine Transform (DCT)](Discrete-Cosine-Transform-(DCT).md)**
+  - Real-valued cosine functions
+  - Energy compaction and signal compression
+
+- **[Fourier Transform with Librosa](Fourier-Transform-with-Librosa.md)**
+  - Computing STFTs and plotting spectrograms using Python libraries

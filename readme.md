@@ -14,6 +14,13 @@ The documentation is organized into the following core topics:
 - **[Discrete Fourier Transform (DFT)](wiki/Discrete-Fourier-Transform-(DFT).md)**: The mathematical definition of DFT and a manual Python implementation.
 - **[Fast Fourier Transform (FFT)](wiki/Fast-Fourier-Transform-(FFT).md)**: Practical application using NumPy, extracting frequency bins, and proper magnitude scaling.
 - **[Spectral Leakage and Intuition](wiki/Spectral-Leakage-and-Intuition.md)**: The conceptual intuition behind Fourier Transforms and how to handle spectral leakage.
+- **[Short-Time Fourier Transform (STFT)](wiki/Short-Time-Fourier-Transform-(STFT).md)**: Understanding time-frequency resolution trade-offs.
+- **[Discrete Cosine Transform (DCT)](wiki/Discrete-Cosine-Transform-(DCT).md)**: Real-valued transformations and energy compaction for compression.
+- **[Fourier Transform with Librosa](wiki/Fourier-Transform-with-Librosa.md)**: Real-world practical usage for audio analysis using Librosa.
+
+## 🎛️ Projects
+
+- **[Mini Audio Analyzer](Mini%20Audio%20Analyzer/)**: A small audio analysis setup/project.
 
 ## 🚀 Usage
 
