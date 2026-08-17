@@ -1,4 +1,5 @@
 from audio_analyzer.signals import generate_synthetic_signal
+from audio_analyzer.plotting import plot_waveform
 
 def main():
     sample_rate = 16000
@@ -12,6 +13,8 @@ def main():
     print(f"Signal shape: {signal.shape}")
     print(f"First time value: {time[0]}")
     print(f"Last time value: {time[-1]}")
+
+    plot_waveform(time,signal)
 
 if __name__ == "__main__":
     main()
