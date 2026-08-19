@@ -1,5 +1,6 @@
 from audio_analyzer.signals import generate_synthetic_signal
 from audio_analyzer.plotting import plot_waveform
+from audio_analyzer.spectrum import compute_spectrum
 
 def main():
     sample_rate = 16000
@@ -14,7 +15,19 @@ def main():
     print(f"First time value: {time[0]}")
     print(f"Last time value: {time[-1]}")
 
+    frequencies,spectrum = compute_spectrum(signal,sample_rate)
+    print(f"Frequencies shape: {frequencies.shape}")
+    print(f"Spectrum shape: {spectrum.shape}")
+    print(f"First frequency value: {frequencies[0]}")
+    print(f"Last frequency value: {frequencies[-1]}")
+    print(f"First spectrum value: {spectrum[0]}")
+    print(f"Last spectrum value: {spectrum[-1]}")
+    #bin spacing
+    bin_spacing = frequencies[1] - frequencies[0]
+    print(f"Bin spacing: {bin_spacing}")
+
     plot_waveform(time,signal)
+    
 
 if __name__ == "__main__":
     main()
