@@ -27,7 +27,5 @@ def main():
     print(f"Bin spacing: {bin_spacing}")
 
     plot_waveform(time,signal)
-    
-
 if __name__ == "__main__":
     main()
