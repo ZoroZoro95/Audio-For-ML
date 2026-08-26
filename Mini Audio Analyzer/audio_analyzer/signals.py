@@ -8,7 +8,7 @@ def generate_synthetic_signal(sample_rate:int, duration:float)-> tuple[np.ndarra
         signal : Signal Amplitudes , shape(number of samples,)
     """
     #No of samples
-    N = int(sample_rate*duration)
+    N = int(sample_rate*duration) #48000 samples
     #sample indices
     n = np.arange(N)
 
