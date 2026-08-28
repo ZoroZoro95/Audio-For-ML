@@ -1,5 +1,5 @@
 from audio_analyzer.signals import generate_synthetic_signal
-from audio_analyzer.plotting import plot_waveform
+from audio_analyzer.plotting import plot_waveform,plot_spectrum
 from audio_analyzer.spectrum import compute_spectrum
 from audio_analyzer.spectrum import compute_spectrum_amplitude
 
@@ -32,8 +32,11 @@ def main():
     print(f"First frequency value: {frequencies[0]}")
     print(f"Last frequency value: {frequencies[-1]}")
 
-
+    #plot waveform
     plot_waveform(time,signal)
+
+    #plot spectrum Freq vs Amp
+    plot_spectrum(frequencies,amplitudes)
 
 if __name__ == "__main__":
     main()

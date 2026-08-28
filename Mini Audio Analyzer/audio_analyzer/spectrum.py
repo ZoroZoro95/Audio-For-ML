@@ -31,6 +31,9 @@ def compute_spectrum(signal,sample_rate):
     return frequencies,spectrum
 
 def compute_spectrum_amplitude(signal, sample_rate):
+    """
+    returns one sided amplitude spectrum from 0 to sample_rate / 2.
+    """
     N = len(signal)
     spectrum = np.fft.fft(signal)
 
@@ -38,7 +41,7 @@ def compute_spectrum_amplitude(signal, sample_rate):
 
     # Indices 0 through N/2, including Nyquist.
     frequencies = np.arange(half + 1) * sample_rate / N
-
+    #0,0.333,0.666,.......8000Hz
     # Keep DC through Nyquist and normalize.
     amplitudes = np.abs(spectrum[:half + 1]) / N
 
