@@ -49,3 +49,25 @@ def compute_spectrum_amplitude(signal, sample_rate):
     amplitudes[1:-1] *= 2
 
     return frequencies, amplitudes
+
+def find_dominant_frequencies(frequencies,amplitudes):
+    """
+    returns : (Dominant1 Hz , Amp1) and (Dominant2 Hz, Amp2)
+    """
+    #exclude dc
+    largest = float('-inf')
+    second_largest = float('-inf')
+    largest_index = 0
+    second_largest_index = 0
+    for i,curr_amp in enumerate(amplitudes[1:],start= 1):
+        if curr_amp > largest:
+            second_largest = largest
+            second_largest_index = largest_index
+            largest = curr_amp
+            largest_index = i
+        elif curr_amp > second_largest:
+            second_largest = curr_amp
+            second_largest_index = i
+    largest_freq = frequencies[largest_index]
+    second_freq = frequencies[second_largest_index]
+    return largest_freq, second_freq, largest_index, second_largest_index, largest, second_largest

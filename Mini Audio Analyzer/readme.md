@@ -14,10 +14,14 @@ The project currently supports synthetic audio signal generation, raw Fast Fouri
         *   `1-2s`: A 500 Hz sine wave.
         *   `2-3s`: A combined 200 Hz and 500 Hz sine wave.
 *   **Spectrum Analysis (`audio_analyzer/spectrum.py`)**: 
-    *   Computes the raw FFT of the audio signal using `numpy.fft.fft`.
+    *   **Raw FFT**: Computes the raw FFT of the audio signal using `numpy.fft.fft`.
     *   Calculates the corresponding frequency bins using `numpy.fft.fftfreq` (achieving a ~0.3333 Hz bin spacing for the 3-second signal).
+    *. **Amplitude Spectrum (`compute_spectrum_amplitude`)**: Computes the one-sided amplitude spectrum.
+        *   *Why this is important*: Raw FFT output contains complex numbers and includes negative frequencies. The amplitude spectrum provides the physical magnitude of the frequencies from 0 to the Nyquist frequency (half the sample rate).
+        *   *How it works*: It discards negative frequencies, scales the magnitude by the number of samples (`N`), and doubles the interior bins to account for the energy of the discarded negative frequencies, ensuring energy is preserved. DC (0 Hz) and Nyquist bins are not doubled.
 *   **Visualization (`audio_analyzer/plotting.py`)**: 
-    *   Plots the synthetic audio waveform using `matplotlib`.
+    *   **Waveform (`plot_waveform`)**: Plots the synthetic audio waveform (amplitude vs time) using `matplotlib`.
+    *   **Spectrum (`plot_spectrum`)**: Plots the one-sided amplitude spectrum (amplitude vs frequency). The plot is zoomed in to the 0-1000 Hz range to clearly visualize the 200 Hz and 500 Hz components of the synthetic signal.
 
 ### Testing
 *   The project uses `pytest` for unit testing.
