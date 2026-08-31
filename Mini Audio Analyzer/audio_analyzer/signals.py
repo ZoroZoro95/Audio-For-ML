@@ -50,3 +50,27 @@ def generate_sine_wave(frequency, sample_rate, num_samples):
     signal = np.sin(2*np.pi*frequency*time) # Signal Amplitudes
     #bin spacing = sample_rate/N = 16000/1024 = 15.625Hz
     return signal
+
+def apply_window(signal, window_type='hann'):
+    """
+    Apply a window function to the signal.
+
+    Args:
+        signal: NumPy array of audio samples.
+        window_type: Type of window to apply.
+                     Supported: 'hann', 'rect', 'blackman', 'flattop'
+                     Defaults to 'hann'.
+
+    Returns:
+        windowed_signal: NumPy array with the window applied.
+        window: The window coefficients used for amplitude normalization.
+    """
+    if window_type == 'rect':
+        window = np.ones(len(signal))
+    elif window_type == 'hann':
+        window = np.hanning(len(signal))
+    else:
+        raise ValueError(f"Unsupported window type: {window_type}. "
+                         "Supported types: 'hann', 'rect'")
+
+    return signal * window, window

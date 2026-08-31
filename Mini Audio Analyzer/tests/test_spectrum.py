@@ -6,7 +6,11 @@ frequencies[0] == 0
 """
 import pytest
 import numpy as np
-from audio_analyzer.signals import generate_synthetic_signal
+from audio_analyzer.signals import (
+    apply_window,
+    generate_sine_wave,
+    generate_synthetic_signal,
+)
 from audio_analyzer.spectrum import compute_spectrum,compute_spectrum_amplitude
 from audio_analyzer.spectrum import find_dominant_frequencies
 
@@ -98,4 +102,22 @@ def test_find_dominant_frequencies_audio_data(audio_data):
     assert np.isclose(second_freq, 500.0)
     assert np.isclose(l_amp, 2/3)
     assert np.isclose(s_amp, 0.5)
+
+
+def test_hann_window_normalization_preserves_sine_amplitude():
+    sample_rate = 16000
+    signal = generate_sine_wave(1000, sample_rate, 1024)
+    windowed_signal, window = apply_window(signal, "hann")
+
+    frequencies, amplitudes = compute_spectrum_amplitude(
+        windowed_signal,
+        sample_rate,
+        normalization_factor=window.sum(),
+    )
+    peak_index = np.argmax(amplitudes)
+
+    assert np.isclose(frequencies[peak_index], 1000.0)
+    assert np.isclose(amplitudes[peak_index], 1.0, atol=1e-6)
+
+
 #run this file : venv/bin/python -m pytest tests/test_spectrum.py -v

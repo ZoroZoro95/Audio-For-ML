@@ -33,8 +33,9 @@ def plot_spectrum(frequencies,amplitudes):
     plt.tight_layout()
     plt.show()
 
-def plot_spectral_leakage_comparison(freq1,ampl1,freq2,ampl2):
+def plot_spectral_leakage_comparison(freq1,ampl1,freq2,ampl2,window_name):
     plt.figure(figsize = (12,5))
+    plt.suptitle(f"Spectral Leakage: {window_name} Window")
     plt.subplot(1,2,1)
     plt.stem(freq1,ampl1)
     plt.title("1000Hz")
@@ -42,8 +43,6 @@ def plot_spectral_leakage_comparison(freq1,ampl1,freq2,ampl2):
     plt.xlabel("Frequency [Hz]")
     plt.ylabel("Amplitude")
     plt.grid(True)
-    plt.tight_layout()
-
     plt.subplot(1,2,2)
     plt.stem(freq2,ampl2)
     plt.title("1007Hz")
