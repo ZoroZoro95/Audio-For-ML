@@ -1,5 +1,5 @@
-from audio_analyzer.signals import generate_synthetic_signal
-from audio_analyzer.plotting import plot_waveform,plot_spectrum
+from audio_analyzer.signals import generate_synthetic_signal,generate_sine_wave
+from audio_analyzer.plotting import plot_waveform,plot_spectrum,plot_spectral_leakage_comparison
 from audio_analyzer.spectrum import compute_spectrum,find_dominant_frequencies
 from audio_analyzer.spectrum import compute_spectrum_amplitude
 
@@ -42,6 +42,18 @@ def main():
 
     print(f"Dominant frequency: {dominant_freq} Hz with amplitude {dom_amp}")
     print(f"Second dominant frequency: {second_dominant_freq} Hz with amplitude {second_amp}")
+
+    #spectral leakage testing
+    singal_1 = generate_sine_wave(1000,16000,1024)
+    signal_2 = generate_sine_wave(1007,16000,1024)
+
+    freq1,ampl1 = compute_spectrum_amplitude(singal_1,16000)
+    freq2,ampl2 = compute_spectrum_amplitude(signal_2,16000)
+
+    #compare plots for 1000Hz vs 1007Hz
+    plot_spectral_leakage_comparison(freq1,ampl1,freq2,ampl2)
+
+    
 
 if __name__ == "__main__":
     main()

@@ -36,3 +36,17 @@ def generate_synthetic_signal(sample_rate:int, duration:float)-> tuple[np.ndarra
         )
     )
     return time,signal
+
+def generate_sine_wave(frequency, sample_rate, num_samples):
+    """
+    This function generates a sine wave.
+    Returns:
+        time : sampling times in seconds, shape(number of samples,)
+        signal : Signal Amplitudes , shape(number of samples,)
+    """
+    N = num_samples # No of samples
+    n = np.arange(N) # sample indices
+    time = n/sample_rate # time array
+    signal = np.sin(2*np.pi*frequency*time) # Signal Amplitudes
+    #bin spacing = sample_rate/N = 16000/1024 = 15.625Hz
+    return signal
