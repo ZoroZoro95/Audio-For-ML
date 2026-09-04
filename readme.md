@@ -17,6 +17,7 @@ The documentation is organized into the following core topics:
 - **[Short-Time Fourier Transform (STFT)](wiki/Short-Time-Fourier-Transform-(STFT).md)**: Understanding time-frequency resolution trade-offs.
 - **[Discrete Cosine Transform (DCT)](wiki/Discrete-Cosine-Transform-(DCT).md)**: Real-valued transformations and energy compaction for compression.
 - **[Fourier Transform with Librosa](wiki/Fourier-Transform-with-Librosa.md)**: Real-world practical usage for audio analysis using Librosa.
+- **[Mel Scale & Spectrograms](spectrograms/)**: Understanding the Mel scale, Mel filterbanks, and computing Mel spectrograms (freq_to_mel and mel_spectrogram notebooks).
 
 ## 🎛️ Projects
 
