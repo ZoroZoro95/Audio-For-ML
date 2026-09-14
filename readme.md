@@ -18,6 +18,7 @@ The documentation is organized into the following core topics:
 - **[Discrete Cosine Transform (DCT)](wiki/Discrete-Cosine-Transform-(DCT).md)**: Real-valued transformations and energy compaction for compression.
 - **[Fourier Transform with Librosa](wiki/Fourier-Transform-with-Librosa.md)**: Real-world practical usage for audio analysis using Librosa.
 - **[Mel Scale & Spectrograms](spectrograms/)**: Understanding the Mel scale, Mel filterbanks, computing Mel spectrograms, Log-Mel Spectrograms, and extracting MFCCs (freq_to_mel, mel_spectrogram, log_mel_spec, and MFCC notebooks).
+- **[Power vs Magnitude Spectrogram](spectrograms/powervsmagnitude_spec.ipynb)**: Understanding the differences between power and magnitude spectrograms.
 
 ## 🎛️ Projects
 
