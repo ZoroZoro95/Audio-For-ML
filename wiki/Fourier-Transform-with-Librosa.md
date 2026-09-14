@@ -9,9 +9,11 @@ While manual Python implementations of the DFT and FFT (using raw `numpy`) are e
 
 ## 2. Computing the STFT
 Instead of manually windowing and iterating over a signal, we can use `librosa.stft`. The mathematics remain the same:
+
 $$
 X(m, \omega) = \sum_{n=-\infty}^{\infty} x[n] \cdot w[n - mR] \cdot e^{-i \omega n}
 $$
+
 Where $R$ is the hop length and $w$ is the window function.
 
 ### Code Example:
@@ -40,6 +42,7 @@ phase = np.angle(stft_complex)
 
 ## 3. Decibel (dB) Scaling
 Human perception of loudness is logarithmic, not linear. A spectrogram plotted with raw magnitude values will often look mostly black because a few loud frequencies dwarf everything else. We convert magnitude to a decibel (dB) scale:
+
 $$
 L_{dB} = 20 \log_{10} \left( \frac{A}{A_{\text{ref}}} \right)
 $$

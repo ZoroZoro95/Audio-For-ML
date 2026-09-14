@@ -13,6 +13,7 @@ A sinusoid is defined by three parameters:
 3. **Phase ($\phi$):** The starting position of the wave (measured in radians).
 
 ### Mathematical Formula
+
 $$
 y(t) = A \sin(2\pi f t + \phi)
 $$

@@ -67,6 +67,7 @@ For a frame containing $K$ samples:
 $$
 \text{ZCR} = \frac{1}{2K} \sum_{k=1}^{K-1} |\text{sgn}(x[i+k]) - \text{sgn}(x[i+k-1])|
 $$
+
 where $\text{sgn}()$ is the signum function (returns $1$ for positive, $-1$ for negative).
 
 ### Usage
