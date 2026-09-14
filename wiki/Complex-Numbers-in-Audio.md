@@ -7,11 +7,15 @@ This page explores the core mathematical mechanism behind the Fourier Transform:
 ## 1. Euler's Formula
 To look for a specific frequency in a signal, the Fourier Transform "wraps" the signal around a circle in the complex plane. This wrapping is achieved using Euler's formula:
 
-$$ e^{i\theta} = \cos(\theta) + i\sin(\theta) $$
+$$
+e^{i\theta} = \cos(\theta) + i\sin(\theta)
+$$
 
 By setting $\theta = -2\pi f t$, we create a "complex test wave" that rotates clockwise around the complex plane at exactly frequency $f$.
 
-$$ e^{-i 2\pi f t} = \cos(-2\pi f t) + i\sin(-2\pi f t) $$
+$$
+e^{-i 2\pi f t} = \cos(-2\pi f t) + i\sin(-2\pi f t)
+$$
 
 ### Why complex numbers?
 Using complex exponentials instead of just sine or cosine serves two purposes:
@@ -21,7 +25,9 @@ Using complex exponentials instead of just sine or cosine serves two purposes:
 ## 2. Wrapping the Signal
 If we take an audio signal $x(t)$ and multiply it point-by-point by our complex test wave, we effectively "wrap" the signal around the origin of the complex plane. 
 
-$$ \text{Wrapped Signal} = x(t) \cdot e^{-i 2\pi f t} $$
+$$
+\text{Wrapped Signal} = x(t) \cdot e^{-i 2\pi f t}
+$$
 
 ## 3. Center of Gravity (Correlation)
 Once the signal is wrapped around the origin at a specific test frequency $f$, we calculate the **Center of Mass** (or center of gravity) of this shape by taking the average (or sum) of all the points.

@@ -9,7 +9,9 @@ At its core, the Fourier Transform asks one simple question for every possible f
 > **"How much does this audio signal look like a pure sine/cosine wave of frequency $f$?"**
 
 To find the answer, the algorithm computes a mathematical "score":
-$$ \text{score}(f) = \sum_{t} \left( \text{signal}(t) \times \text{sinusoid}_f(t) \right) $$
+$$
+\text{score}(f) = \sum_{t} \left( \text{signal}(t) \times \text{sinusoid}_f(t) \right)
+$$
 
 ### The Mechanism of Comparison
 1. For every frequency, the algorithm generates an artificial sine wave.

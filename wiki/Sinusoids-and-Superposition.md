@@ -13,7 +13,9 @@ A sinusoid is defined by three parameters:
 3. **Phase ($\phi$):** The starting position of the wave (measured in radians).
 
 ### Mathematical Formula
-$$ y(t) = A \sin(2\pi f t + \phi) $$
+$$
+y(t) = A \sin(2\pi f t + \phi)
+$$
 
 ### Code Example
 Creating a 5 Hz sine wave in Python:

@@ -11,7 +11,9 @@ While the standard Fast Fourier Transform (FFT) shows us all the frequencies pre
 The STFT addresses this by slicing the signal into short, overlapping segments (called frames) and computing the FFT for each segment.
 
 Mathematically, the discrete STFT is expressed as:
-$$ \text{STFT}\{x[n]\}(m, \omega) = \sum_{n=-\infty}^{\infty} x[n] \cdot w[n - mR] \cdot e^{-i \omega n} $$
+$$
+\text{STFT}\{x[n]\}(m, \omega) = \sum_{n=-\infty}^{\infty} x[n] \cdot w[n - mR] \cdot e^{-i \omega n}
+$$
 Where:
 - $x[n]$ is the original signal.
 - $w[n]$ is the window function (e.g., Hanning window) of length $M$.

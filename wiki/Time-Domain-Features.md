@@ -16,7 +16,9 @@ The Amplitude Envelope represents the maximum amplitude value within a given fra
 ### Mathematical Definition
 For the $t$-th frame starting at index $i$, containing samples $x[i], x[i+1], ..., x[i+K-1]$ (where $K$ is the frame size):
 
-$$ \text{AE}_t = \max_{k=0}^{K-1} |x[i + k]| $$
+$$
+\text{AE}_t = \max_{k=0}^{K-1} |x[i + k]|
+$$
 
 ### Code Example
 ```python
@@ -40,7 +42,9 @@ While Amplitude Envelope takes the maximum value, **RMS** provides an average me
 ### Mathematical Definition
 For a frame containing $K$ samples:
 
-$$ \text{RMS} = \sqrt{ \frac{1}{K} \sum_{k=0}^{K-1} x[i+k]^2 } $$
+$$
+\text{RMS} = \sqrt{ \frac{1}{K} \sum_{k=0}^{K-1} x[i+k]^2 }
+$$
 
 ### Usage
 In `librosa`, you can calculate RMS easily:
@@ -60,7 +64,9 @@ ZCR is a key feature in distinguishing between different types of sounds:
 ### Mathematical Definition
 For a frame containing $K$ samples:
 
-$$ \text{ZCR} = \frac{1}{2K} \sum_{k=1}^{K-1} |\text{sgn}(x[i+k]) - \text{sgn}(x[i+k-1])| $$
+$$
+\text{ZCR} = \frac{1}{2K} \sum_{k=1}^{K-1} |\text{sgn}(x[i+k]) - \text{sgn}(x[i+k-1])|
+$$
 where $\text{sgn}()$ is the signum function (returns $1$ for positive, $-1$ for negative).
 
 ### Usage

@@ -42,3 +42,10 @@ Welcome to the Audio-For-ML wiki! This wiki contains detailed theoretical and co
 
 - **[Fourier Transform with Librosa](Fourier-Transform-with-Librosa.md)**
   - Computing STFTs and plotting spectrograms using Python libraries
+
+- **[Mel Scale & Spectrograms](../spectrograms/)**
+  - Understanding the Mel scale and filterbanks
+  - Computing Mel spectrograms, Log-Mel Spectrograms, and extracting MFCCs
+
+- **[Power vs Magnitude Spectrogram](../spectrograms/powervsmagnitude_spec.ipynb)**
+  - Understanding the differences between power and magnitude spectrograms

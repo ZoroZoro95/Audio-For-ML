@@ -10,7 +10,9 @@ The DFT converts a finite sequence of equally-spaced samples of a function into 
 
 The formula for the Discrete Fourier Transform is:
 
-$$ X[k] = \sum_{n=0}^{N-1} x[n] \cdot e^{-i \cdot 2\pi \cdot \frac{k}{N} \cdot n} $$
+$$
+X[k] = \sum_{n=0}^{N-1} x[n] \cdot e^{-i \cdot 2\pi \cdot \frac{k}{N} \cdot n}
+$$
 
 Where:
 - $X[k]$ is the complex Fourier coefficient for the $k$-th frequency bin.

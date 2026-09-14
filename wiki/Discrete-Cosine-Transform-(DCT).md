@@ -8,7 +8,9 @@ This page explains the **Discrete Cosine Transform (DCT)** and its applications 
 Similar to the Fourier Transform, the DCT expresses a sequence of data points in terms of a sum of cosine functions oscillating at different frequencies. However, unlike the DFT which uses complex numbers (sines and cosines), the DCT uses **only real-valued cosine functions**.
 
 The DCT of a 1D sequence $x[n]$ of length $N$ is typically defined as:
-$$ C[k] = \sum_{n=0}^{N-1} x[n] \cos \left[ \frac{\pi}{N} \left( n + \frac{1}{2} \right) k \right] $$
+$$
+C[k] = \sum_{n=0}^{N-1} x[n] \cos \left[ \frac{\pi}{N} \left( n + \frac{1}{2} \right) k \right]
+$$
 where $k$ ranges from $0$ to $N-1$.
 
 - $C[0]$ represents the average-like component (DC).

@@ -32,7 +32,9 @@ NumPy provides a dedicated function for real-valued inputs called `rfft` (Real F
 
 ### Code Example: Proper Scaling
 The raw magnitudes outputted by the FFT scale with the number of samples ($N$). To get the *true* amplitude of the original sinusoids, we must mathematically scale the result. For a one-sided spectrum, the actual amplitude is calculated as:
-$$ \text{Amplitude} \approx 2 \times \frac{|X[k]|}{N} $$
+$$
+\text{Amplitude} \approx 2 \times \frac{|X[k]|}{N}
+$$
 
 Here is how to compute a fully scaled, one-sided amplitude spectrum:
 
