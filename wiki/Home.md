@@ -49,3 +49,9 @@ Welcome to the Audio-For-ML wiki! This wiki contains detailed theoretical and co
 
 - **[Power vs Magnitude Spectrogram](../spectrograms/powervsmagnitude_spec.ipynb)**
   - Understanding the differences between power and magnitude spectrograms
+
+- **[Decibels and Dynamic Range](Decibels-and-Dynamic-Range.md)**
+  - Understanding decibels, dynamic range, and converting magnitude to decibels
+
+- **[Zero-Padding and FFT Size](Zero-Padding-and-FFT-Size.md)**
+  - How zero-padding affects the FFT and frequency resolution

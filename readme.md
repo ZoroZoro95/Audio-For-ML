@@ -19,6 +19,8 @@ The documentation is organized into the following core topics:
 - **[Fourier Transform with Librosa](wiki/Fourier-Transform-with-Librosa.md)**: Real-world practical usage for audio analysis using Librosa.
 - **[Mel Scale & Spectrograms](spectrograms/)**: Understanding the Mel scale, Mel filterbanks, computing Mel spectrograms, Log-Mel Spectrograms, and extracting MFCCs (freq_to_mel, mel_spectrogram, log_mel_spec, and MFCC notebooks).
 - **[Power vs Magnitude Spectrogram](spectrograms/powervsmagnitude_spec.ipynb)**: Understanding the differences between power and magnitude spectrograms.
+- **[Decibels and Dynamic Range](wiki/Decibels-and-Dynamic-Range.md)**: Understanding decibels, dynamic range, and converting magnitude to decibels.
+- **[Zero-Padding and FFT Size](wiki/Zero-Padding-and-FFT-Size.md)**: How zero-padding affects the FFT and frequency resolution.
 
 ## 🎛️ Projects
 
