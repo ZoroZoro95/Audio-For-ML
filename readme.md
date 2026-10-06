@@ -21,6 +21,8 @@ The documentation is organized into the following core topics:
 - **[Power vs Magnitude Spectrogram](spectrograms/powervsmagnitude_spec.ipynb)**: Understanding the differences between power and magnitude spectrograms.
 - **[Decibels and Dynamic Range](wiki/Decibels-and-Dynamic-Range.md)**: Understanding decibels, dynamic range, and converting magnitude to decibels.
 - **[Zero-Padding and FFT Size](wiki/Zero-Padding-and-FFT-Size.md)**: How zero-padding affects the FFT and frequency resolution.
+- **[Window Length vs Hop Length](wiki/Window-Length-vs-Hop-Length.md)**: Understanding the trade-offs between time and frequency resolution in STFT.
+- **[Aliasing](wiki/Aliasing.md)**: The theory behind aliasing, the Nyquist theorem, and how high frequencies fold back during sampling.
 
 ## 🎛️ Projects
 
