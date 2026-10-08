@@ -55,3 +55,7 @@ Welcome to the Audio-For-ML wiki! This wiki contains detailed theoretical and co
 
 - **[Zero-Padding and FFT Size](Zero-Padding-and-FFT-Size.md)**
   - How zero-padding affects the FFT and frequency resolution
+
+- **[Resampling and Anti-Aliasing](Resampling-and-Anti-Aliasing.md)**
+  - Downsampling, upsampling, and interpolation
+  - Anti-aliasing filters

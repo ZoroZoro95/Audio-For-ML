@@ -50,7 +50,8 @@ Extracting meaningful attributes from audio in both the time and frequency domai
 Miscellaneous foundational concepts that govern digital signal processing.
 - [`5_General_theory_and_observations/window_length_vs_hop_length.ipynb`](5_General_theory_and_observations/window_length_vs_hop_length.ipynb)
 - [`5_General_theory_and_observations/Aliasing.ipynb`](5_General_theory_and_observations/Aliasing.ipynb)
-- *Related Wikis*: [Window Length vs Hop Length](wiki/Window-Length-vs-Hop-Length.md), [Aliasing](wiki/Aliasing.md)
+- [`5_General_theory_and_observations/Resampling_and_AntiAliasing_Filter.ipynb`](5_General_theory_and_observations/Resampling_and_AntiAliasing_Filter.ipynb)
+- *Related Wikis*: [Window Length vs Hop Length](wiki/Window-Length-vs-Hop-Length.md), [Aliasing](wiki/Aliasing.md), [Resampling and Anti-Aliasing](wiki/Resampling-and-Anti-Aliasing.md)
 
 ---
 
